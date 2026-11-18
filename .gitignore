@@ -1,0 +1,17 @@
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Configuración local y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencias y paquetes generados
+node_modules/
+*.zip
+*.crx

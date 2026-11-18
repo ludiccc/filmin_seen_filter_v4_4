@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filmin Seen Filter - Opciones</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Filmin Seen Filter</h1>
+    <p class="intro">Pegá tu listado de películas vistas. Acepta una por línea, JSON array o CSV simple.</p>
+
+    <section class="card">
+      <label class="row">
+        <span>Activado</span>
+        <input type="checkbox" id="enabled">
+      </label>
+
+      <label class="block">
+        <span>Modo</span>
+        <select id="mode">
+          <option value="hide">Ocultar títulos vistos</option>
+          <option value="dim">Atenuar y marcar como vistos</option>
+        </select>
+      </label>
+
+      <label class="block">
+        <span>Listado</span>
+        <textarea id="titles" placeholder="Ejemplo:
+Drive My Car
+Aftersun
+Perfect Days"></textarea>
+      </label>
+
+      <div class="actions">
+        <button id="save">Guardar</button>
+        <button id="dedupe" type="button">Eliminar duplicados</button>
+        <button id="clear" type="button">Limpiar</button>
+      </div>
+
+      <p id="status" class="status"></p>
+      <p class="meta">Títulos cargados: <strong id="count">0</strong></p>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

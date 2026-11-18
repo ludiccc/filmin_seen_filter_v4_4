@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Filmin Seen Filter",
+  "version": "1.2.4",
+  "description": "Oculta o atenúa títulos vistos en Filmin, importa el historial y permite filtrar por valoración mínima.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.filmin.es/*"
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Filmin Seen Filter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.filmin.es/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.filmin.es/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
